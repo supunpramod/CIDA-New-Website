@@ -40,10 +40,6 @@ const Header = () => {
         </div>
       </div>
 
-
-
-
-          
           {/* Mobile menu button */}
           <button className="lg:hidden p-2">
             <div className="w-6 h-0.5 bg-gray-600 mb-1"></div>
@@ -54,7 +50,7 @@ const Header = () => {
       </div>
 
      {/* Green navigation bar */}
-<div className="bg-green-500 py-3">
+<div className="bg-[#8DC63E] py-4">
   <div className="max-w-7xl mx-auto ">
     <nav className="hidden lg:flex items-center justify-end space-x-12">
       <a href="#" className="text-white hover:text-green-100 font-medium">Home</a>
