@@ -39,7 +39,7 @@ const Header = () => {
 
             {/* Language switcher */}
             <div className="flex bg-gray-200 rounded overflow-hidden h-10 items-center">
-              <button className="px-4 bg-green-500 text-white h-full">Sin</button>
+              <button className="px-4 bg-[#8DC63E] text-white h-full">Sin</button>
               <button className="px-4 text-gray-600 h-full">Eng</button>
               <button className="px-4 text-gray-600 h-full">Tamil</button>
             </div>
@@ -58,8 +58,8 @@ const Header = () => {
       </div>
 
       {/* Navigation bar */}
-      <div className="bg-green-500 hidden md:flex items-center text-gray-600">
-        <div className="flex justify-end px-12 py-2 w-full ">
+      <div className="bg-[#8DC63E] hidden md:flex items-center text-gray-600">
+        <div className="flex justify-end px-12 py-5 w-full ">
           {/* Desktop nav */}
           <nav className="hidden lg:flex space-x-8 items-center">
             {navItems.map((item) => (
