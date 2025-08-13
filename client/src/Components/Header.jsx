@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Clock, Menu, X } from 'lucide-react';
 import GovernmentLogo from "../assets/Sri_Lanka_Government2.png";
 import SrilankaFlag from "../assets/Srilanka_flag.png";
 import Logo from "../assets/logo.png";
@@ -12,14 +12,24 @@ const Header = () => {
     <header className="w-full">
       {/* Top header */}
       <div className="bg-white shadow-sm w-full">
-        <div className="flex justify-between items-center px-12 py-2">
+        <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-12 py-2">
           {/* Logos */}
-          <div className="flex items-center space-x-4">
-            <img src={GovernmentLogo} alt="Government Logo" className="h-16 w-auto" />
-            <img src={Logo} alt="Main Logo" className="h-14 w-auto" />
+          <div className="flex items-center justify-between w-full md:w-auto">
+            <div className="flex items-center space-x-2 md:space-x-4">
+              <img src={GovernmentLogo} alt="Government Logo" className="h-12 md:h-16 w-auto" />
+              <img src={Logo} alt="Main Logo" className="h-10 md:h-14 w-auto" />
+            </div>
+
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden p-2"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
 
-          {/* Contact + Language */}
+          {/* Contact + Language - hidden on mobile */}
           <div className="hidden md:flex items-center space-x-6 text-sm text-gray-600">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
@@ -39,47 +49,69 @@ const Header = () => {
 
             {/* Language switcher */}
             <div className="flex bg-gray-200 rounded overflow-hidden h-10 items-center">
-              <button className="px-4 bg-[#8DC63E] text-white h-full">Sin</button>
+              <button className="px-4 bg-[#8DC63E] text-white h-full">සිං</button>
+              <button className="px-4 text-gray-600 h-full">தமிழ்</button>
               <button className="px-4 text-gray-600 h-full">Eng</button>
-              <button className="px-4 text-gray-600 h-full">Tamil</button>
             </div>
           </div>
+        </div>
 
-          {/* Mobile menu button */}
-          <button
-            className="lg:hidden p-2 flex flex-col justify-center space-y-1"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <span className="block w-6 h-0.5 bg-gray-600"></span>
-            <span className="block w-6 h-0.5 bg-gray-600"></span>
-            <span className="block w-6 h-0.5 bg-gray-600"></span>
-          </button>
+        {/* Mobile contact info - shown only on mobile */}
+        <div className="md:hidden px-4 py-2 bg-gray-50 text-sm text-gray-600">
+          <div className="flex items-center space-x-4 overflow-x-auto pb-1">
+            <div className="flex items-center space-x-2 shrink-0">
+              <Phone className="w-4 h-4" />
+              <span>+94 011 234 34 45</span>
+            </div>
+            <div className="flex items-center space-x-2 shrink-0">
+              <Mail className="w-4 h-4" />
+              <span>info@cida.gov.lk</span>
+            </div>
+            <div className="flex items-center space-x-2 shrink-0">
+              <Clock className="w-4 h-4" />
+              <span>8:30 - 4:15</span>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Navigation bar */}
-      <div className="bg-[#8DC63E] hidden md:flex items-center text-gray-600">
-        <div className="flex justify-end px-12 py-5 w-full ">
-          {/* Desktop nav */}
-          <nav className="hidden lg:flex space-x-8 items-center">
+      <div className="bg-[#8DC63E] w-full">
+        {/* Desktop nav */}
+        <nav className="hidden md:flex justify-end px-12 py-5 space-x-8">
+          {navItems.map((item) => (
+            <a 
+              key={item} 
+              href="#" 
+              className="text-white hover:text-green-100 font-medium text-sm lg:text-base"
+            >
+              {item}
+            </a>
+          ))}
+        </nav>
+
+        {/* Mobile menu */}
+        {menuOpen && (
+          <div className="md:hidden flex flex-col space-y-1 p-5 bg-[#7cb42e]">
             {navItems.map((item) => (
-              <a key={item} href="#" className="text-white hover:text-green-100 font-medium">
+              <a 
+                key={item} 
+                href="#" 
+                className="text-white hover:text-green-100 font-medium py-2 px-3 rounded hover:bg-[#6aa326]"
+                onClick={() => setMenuOpen(false)}
+              >
                 {item}
               </a>
             ))}
-          </nav>
-
-          {/* Mobile menu */}
-          {menuOpen && (
-            <div className="lg:hidden flex flex-col space-y-3 mt-3 items-end">
-              {navItems.map((item) => (
-                <a key={item} href="#" className="text-white hover:text-green-100 font-medium">
-                  {item}
-                </a>
-              ))}
+            <div className="flex justify-center mt-2 pt-2 border-t border-green-100">
+              <div className="flex bg-gray-200 rounded overflow-hidden h-8 items-center">
+                <button className="px-3 bg-[#8DC63E] text-white h-full text-sm">Sin</button>
+                <button className="px-3 text-gray-600 h-full text-sm">Tamil</button>
+                <button className="px-3 text-gray-600 h-full text-sm">Sinhala</button>
+              </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </header>
   );
