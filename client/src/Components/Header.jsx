@@ -1,6 +1,8 @@
 import React from 'react';
 import { Phone, Mail, Clock } from 'lucide-react';
 import GovernmentLogo from "../assets/Sri_Lanka_Government2.png";
+import SrilankaFlag from "../assets/Srilanka_flag.png";
+import Logo from "../assets/logo.png";
 
 
 const Header = () => {
@@ -17,8 +19,7 @@ const Header = () => {
               <img src={GovernmentLogo} alt="Government Logo" className="w-30 h-20" />
            
             <div>
-              <h1 className="text-xl font-bold text-gray-800">CIDA</h1>
-              <p className="text-xs text-gray-600">Construction Industry Development Authority</p>
+               <img src={Logo} alt="Sri Lanka Flag" className="w-90 h-14"  />
             </div>
           </div>
 
@@ -38,7 +39,10 @@ const Header = () => {
             <Clock className="w-4 h-4" />
             <span>Mon - Fri: 8:30 - 4:15</span>
           </div>
-          <div className="w-6 h-4 bg-red-600 rounded-sm"></div>
+          <div className="flex items-center space-x-2">
+            <img src={SrilankaFlag} alt="Sri Lanka Flag" className="w-6 h-4" />
+            
+          </div>
         </div>
       </div>
 
