@@ -25,7 +25,7 @@ const Header = () => {
 
           {/* Navigation */}
           {/* Top contact bar */}
-      <div className="bg-gray-50 py-2 ">
+      <div className="bg-transparent py-2 ">
         <div className="max-w-7xl mx-auto flex justify-end items-center space-x-6 text-sm text-gray-600">
           <div className="flex items-center space-x-2">
             <Phone className="w-4 h-4" />
@@ -41,6 +41,14 @@ const Header = () => {
           </div>
           <div className="flex items-center space-x-2">
             <img src={SrilankaFlag} alt="Sri Lanka Flag" className="w-6 h-4" />
+            
+          </div>
+          <div className='bg-[#D9D9D9] flex rounded h-10 m-4 items-center  '>
+            
+            <div className='text-[#808185] px-4 py-2 bg-[#8DC63E] rounded  '>Sin</div>
+            
+            <div className='text-[#808185]   px-4 py-1 '>Eng</div>
+            <div className='text-[#808185]   px-4 py-1 '>Tamil</div>
             
           </div>
         </div>
