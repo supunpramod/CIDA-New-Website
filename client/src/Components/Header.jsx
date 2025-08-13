@@ -1,5 +1,7 @@
 import React from 'react';
 import { Phone, Mail, Clock } from 'lucide-react';
+import GovernmentLogo from "../assets/Sri_Lanka_Government2.png";
+
 
 const Header = () => {
   return (
@@ -7,13 +9,13 @@ const Header = () => {
       
 
       {/* Main header */}
-      <div className="py-4 px-4">
+      <div className=" px-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo section */}
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-              <div className="w-8 h-8 bg-green-600 rounded-full"></div>
-            </div>
+            
+              <img src={GovernmentLogo} alt="Government Logo" className="w-30 h-20" />
+           
             <div>
               <h1 className="text-xl font-bold text-gray-800">CIDA</h1>
               <p className="text-xs text-gray-600">Construction Industry Development Authority</p>
@@ -50,7 +52,7 @@ const Header = () => {
       </div>
 
      {/* Green navigation bar */}
-<div className="bg-[#8DC63E] py-4">
+<div className="bg-[#8DC63E] py-7">
   <div className="max-w-7xl mx-auto ">
     <nav className="hidden lg:flex items-center justify-end space-x-12">
       <a href="#" className="text-white hover:text-green-100 font-medium">Home</a>
