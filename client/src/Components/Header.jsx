@@ -78,7 +78,7 @@ const Header = () => {
       {/* Navigation bar */}
       <div className="bg-[#8DC63E] w-full">
         {/* Desktop nav */}
-        <nav className="hidden md:flex justify-end px-12 py-5 space-x-8">
+        <nav className="hidden md:flex justify-end px-12 py-6 space-x-12">
           {navItems.map((item) => (
             <a 
               key={item} 
