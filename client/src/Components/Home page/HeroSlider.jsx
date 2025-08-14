@@ -4,9 +4,9 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const HeroSlider = () => {
   const slides = [
-    { image: "slide1.png",  title1: "The Smart", title2: "Choice For Future",subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", buttonText: "Shop Now" },
-    { image: "slide2.png",  title1: "Building Dreams", title2: "Creating your Futures",subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", buttonText: "Shop Now" },
-    { image: "slide3.png", title1: "Empowering your Ideas", title2: "Inspiring of  Growth",subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", buttonText: "Shop Now" }
+    { image: "slide1.png",  title1: "The ",titleend: "Smart" ,title2: "Choice For", titleend2:" Future",subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", buttonText: "Shop Now" },
+    { image: "slide2.png",  title1: "Building ", titleend: "Dreams" , title2: "Creating your ",titleend2:" Futures",subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", buttonText: "Shop Now" },
+    { image: "slide3.png", title1: "Empowering ", titleend: "your Ideas", title2: "Inspiring ", titleend2:" of Growth",subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", buttonText: "Shop Now" }
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -31,36 +31,40 @@ const HeroSlider = () => {
             style={{ backgroundImage: `url(/src/assets/${slide.image})` }}
 
           >
-            <div className="container h-full flex items-center justify-center">
-              <div className="text-center text-black">
-                
-                <div className="mb-8">
-                  <h2 className="text-3xl md:text-5xl font-bold mb-6">{slide.title1}</h2>
-                </div>
-                <div className="mb-8">
-                  <h2 className="text-3xl md:text-5xl font-bold mb-6">{slide.title2}</h2>
-                </div>
-                <div className="mb-4">
-                  <span className="text-xl md:text-2xl">{slide.subtitle}</span>
-                  
-                </div>
-                <div>
-                  <a
-                    href="/shop"
-                    className="inline-block bg-white text-black px-8 py-3 m-4 hover:bg-red-500 transition rounded-md"
-                  >
-                    {slide.buttonText}
-                  </a>
-                  <a
-                    href="/shop"
-                    className="inline-block bg-white text-black px-8 py-3 hover:bg-red-500 transition rounded-md"
-                  >
-                    {slide.buttonText}
-                  </a>
-                </div>
-                
-              </div>
-            </div>
+            <div className="my-20 mx-100 md:my-8 py-10 flex flex-col md:flex-row items-center justify-between gap-12">
+  <div className="md:w-1/2 ml-20 mb-2">
+    <div className="mb-8">
+      <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">{slide.title1}
+        <span className="text-[#8DC63E]">{slide.titleend}</span>
+      </h2>
+      
+      
+    </div>
+    <div className="mb-8">
+      <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">{slide.title2}
+        <span className="text-[#8DC63E]">{slide.titleend2}</span>
+      </h2>
+    </div>
+    <div className="mb-4">
+      <span className="text-xl md:text-2xl text-white">{slide.subtitle}</span>
+    </div>
+    <div>
+      <a
+        href="/shop"
+        className="inline-block bg-white text-black px-8 py-3 m-4 hover:bg-red-500 transition rounded-md"
+      >
+        {slide.buttonText}
+      </a>
+      <a
+        href="/shop"
+        className="inline-block bg-white text-black px-8 py-3 hover:bg-red-500 transition rounded-md"
+      >
+        {slide.buttonText}
+      </a>
+    </div>
+  </div>
+</div>
+
           </div>
         ))}
 
