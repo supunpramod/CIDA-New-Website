@@ -4,9 +4,9 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const HeroSlider = () => {
   const slides = [
-    { image: "slide1.png",  title1: "The ",titleend: "Smart" ,title2: "Choice For", titleend2:" Future",subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", buttonText: "Shop Now" },
-    { image: "slide2.png",  title1: "Building ", titleend: "Dreams" , title2: "Creating your ",titleend2:" Futures",subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", buttonText: "Shop Now" },
-    { image: "slide3.png", title1: "Empowering ", titleend: "your Ideas", title2: "Inspiring ", titleend2:" of Growth",subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", buttonText: "Shop Now" }
+    { image: "slide1.png",  title1: "The ",titleend: "Smart" ,title2: "Choice For", titleend2:" Future",subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", buttonText1: "Get Start" ,buttonText2:"Our rate"},
+    { image: "slide2.png",  title1: "Building ", titleend: "Dreams" , title2: "Creating your ",titleend2:" Futures",subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", buttonText1: "Get Start" ,buttonText2:"Our rate"},
+    { image: "slide3.png", title1: "Empowering ", titleend: "your Ideas", title2: "Inspiring ", titleend2:" of Growth",subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", buttonText1: "Get Start", buttonText2:"Our rate"}
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -33,33 +33,33 @@ const HeroSlider = () => {
           >
             <div className="my-20 mx-100 md:my-8 py-10 flex flex-col md:flex-row items-center justify-between gap-12">
   <div className="md:w-1/2 ml-20 mb-2">
-    <div className="mb-8">
-      <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">{slide.title1}
+    <div className="mb-5">
+      <h1 className="text-6xl  font-bold mb-6 text-white">{slide.title1}
         <span className="text-[#8DC63E]">{slide.titleend}</span>
-      </h2>
+      </h1>
       
       
     </div>
     <div className="mb-8">
-      <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">{slide.title2}
+      <h2 className="text-6xl  font-bold mb-6 text-white">{slide.title2}
         <span className="text-[#8DC63E]">{slide.titleend2}</span>
       </h2>
     </div>
     <div className="mb-4">
-      <span className="text-xl md:text-2xl text-white">{slide.subtitle}</span>
+      <span className="text-xl md:text-1xl text-white">{slide.subtitle}</span>
     </div>
     <div>
       <a
         href="/shop"
-        className="inline-block bg-white text-black px-8 py-3 m-4 hover:bg-red-500 transition rounded-md"
+        className="inline-block bg-[#8DC63E] text-white px-14 py-3 mr-5 rounded-full bg  transition "
       >
-        {slide.buttonText}
+        {slide.buttonText1}
       </a>
       <a
         href="/shop"
-        className="inline-block bg-white text-black px-8 py-3 hover:bg-red-500 transition rounded-md"
+        className="inline-block bg-white text-[#8DC63E] px-8 py-3 rounded-full border-2 border-[#8DC63E]  transition "
       >
-        {slide.buttonText}
+        {slide.buttonText2}
       </a>
     </div>
   </div>
@@ -69,7 +69,7 @@ const HeroSlider = () => {
         ))}
 
         {/* Left Arrow */}
-        <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
+        {/* <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
           <button
             onClick={() =>
               setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
@@ -78,21 +78,21 @@ const HeroSlider = () => {
           >
             <FontAwesomeIcon icon={faArrowLeft} />
           </button>
-        </div>
+        </div> */}
 
         {/* Right Arrow */}
-        <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10">
+        {/* <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10">
           <button
             onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
             className="bg-white text-black rounded-md p-2 shadow hover:bg-red-500 hover:text-white transition"
           >
             <FontAwesomeIcon icon={faArrowRight} />
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-2">
+      <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-2 ">
         {slides.map((_, index) => (
           <button
             key={index}
