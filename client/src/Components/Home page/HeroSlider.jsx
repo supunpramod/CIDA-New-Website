@@ -20,8 +20,8 @@ const HeroSlider = () => {
   }, [slides.length]);
 
   return (
-    <section className="relative">
-      <div className="relative h-screen overflow-hidden">
+    <section className="relative pb-15 mb-10">
+      <div className="relative h-screen overflow-hidden  ">
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -92,7 +92,7 @@ const HeroSlider = () => {
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-2 ">
+      <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-2 pb-24 mb-20">
         {slides.map((_, index) => (
           <button
             key={index}
