@@ -1,31 +1,35 @@
 import React from 'react';
+import Registrationimg from '../../assets/registration.png';
+import Appealimg from '../../assets/appeal.png';
+import Publicationimg from '../../assets/publication.png';
+import Epaymentimg from '../../assets/epayments.png';
 
 const QuickAction = () => {
   const cards = [
     {
       title: 'Registration',
       description: 'Ut enim ad minim veniam, quis nost exercitation ultamco laboris nisi ut aliquip ex commodo.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
-    },
-    {
-      title: 'Appeal & Info',
-      description: 'Ut enim ad minim veniam, quis nost exercitation ultamco laboris nisi ut aliquip ex commodo.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
+      image: Registrationimg
     },
     {
       title: 'Publication',
       description: 'Ut enim ad minim veniam, quis nost exercitation ultamco laboris nisi ut aliquip ex commodo.',
-      image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
+      image: Publicationimg
+    },
+    {
+      title: 'Appeal & Info',
+      description: 'Ut enim ad minim veniam, quis nost exercitation ultamco laboris nisi ut aliquip ex commodo.',
+      image: Appealimg
     },
     {
       title: 'E - Payments',
       description: 'Ut enim ad minim veniam, quis nost exercitation ultamco laboris nisi ut aliquip ex commodo.',
-      image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
+      image: Epaymentimg
     },
   ];
 
   return (
-    <div className="max-w-auto mx-auto  px-4 md:px-12 py-2 ">
+    <div className="max-w-auto mx-auto   py-2 px-10 md:px-16 ">
       {/* Header Section */}
       <div className="mb-12 text-center md:text-left">
         <span className="text-2xl font-medium text-[#8DC63E] py-1">Explore Access</span>
@@ -44,7 +48,7 @@ const QuickAction = () => {
               <img
                 src={card.image}
                 alt={card.title}
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 p-2 "
               />
             </div>
 

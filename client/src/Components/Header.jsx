@@ -12,12 +12,13 @@ const Header = () => {
     <header className="w-full">
       {/* Top header */}
       <div className="bg-white shadow-sm w-full">
-        <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-12 py-2">
+        <div className="flex flex-col md:flex-row justify-between items-center px-10 md:px-16 py-2">
           {/* Logos */}
           <div className="flex items-center justify-between w-full md:w-auto">
-            <div className="flex items-center space-x-2 md:space-x-4">
-              <img src={GovernmentLogo} alt="Government Logo" className="h-12 md:h-16 w-auto" />
+            <div className="flex items-center space-x-2 md:space-x-3">
               <img src={Logo} alt="Main Logo" className="h-10 md:h-14 w-auto" />
+              <img src={GovernmentLogo} alt="Government Logo" className="h-12 md:h-16 w-auto pb-1" />
+              
             </div>
 
             {/* Mobile menu button */}
@@ -78,7 +79,7 @@ const Header = () => {
       {/* Navigation bar */}
       <div className="bg-[#8DC63E] w-full">
         {/* Desktop nav */}
-        <nav className="hidden md:flex justify-end px-12 py-6 space-x-12">
+        <nav className="hidden md:flex justify-end px-10 md:px-16 py-6 space-x-12">
           {navItems.map((item) => (
             <a 
               key={item} 
