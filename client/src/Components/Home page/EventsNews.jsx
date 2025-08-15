@@ -44,9 +44,9 @@ const EventsNews = () => {
     <div className="max-w-6xl mx-auto px-4 py-12 font-sans">
       {/* Header Section */}
       <div className="mb-12 text-left">
-        <h2 className="text-4xl font-bold text-gray-900 mb-2">Events & News</h2>
-        <h3 className="text-2xl font-semibold text-gray-700 mb-4">Latest Updates & Announcements</h3>
-        <p className="text-gray-600  mx-auto">
+        <h2 className=" font-bold text-[#8DC63E] mb-2 text-2xl">Events and News</h2>
+        <h3 className="text-4xl font-semibold text-[#818285] mb-4">Latest Updates <span className="text-[#8DC63E]"> & News</span></h3>
+        <p className="text-[#818285]  mx-auto">
           Stay updated with the latest events and news from our organization. Explore what's happening and never miss out!
         </p>
       </div>
@@ -88,7 +88,7 @@ const EventsNews = () => {
                       <span className="text-gray-600 font-medium">{event.date}</span>
                       <span className="text-gray-600 font-medium">{event.time}</span>
                     </div>
-                    <button className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-full font-semibold transition-colors duration-300">
+                    <button className="text-[#8DC63E] bg-transparent hover:bg-blue-700 px-4 py-1 rounded-full font-semibold transition-colors duration-300 border border-[#8DC63E]">
                       See More
                     </button>
                   </div>
@@ -106,7 +106,7 @@ const EventsNews = () => {
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`w-4 h-4 rounded-full transition-colors duration-300 ${
-              currentIndex === index ? "bg-blue-600" : "bg-gray-300"
+              currentIndex === index ? "bg-[#8DC63E]" : "bg-gray-300"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
