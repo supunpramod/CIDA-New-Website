@@ -42,7 +42,7 @@ const SubInstitutes = () => {
 
   return (
     <section 
-      className="min-h-screen bg-cover bg-center bg-fixed relative  md:py-24  "
+      className="min-h-screen bg-cover bg-center bg-fixed relative mt-10  md:py-24  "
       style={{
   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${ CoverImg})`
 }}
