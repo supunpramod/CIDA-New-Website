@@ -4,6 +4,7 @@ import QuickAction from './QuickAction';
 import SubInstitutes from './SubInstitutes';
 import EventsNews from './EventsNews.jsx';
 import Research from './Research.jsx';
+import FacilityBooking from './FacilityBooking.jsx';
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
             <SubInstitutes/>
            <EventsNews/>
            <Research/>
+           <FacilityBooking/>
 
         </div>
     );

@@ -3,7 +3,7 @@ import Researchimg from '../../assets/research.png';
 
 function Research() {
   return (
-    <div className="bg-white  py-2 px-10 md:px-16 ">
+    <div className="bg-white  py-10 px-10 md:px-16 ">
       <div className=" mx-auto">
 
         {/* Header Section */}
