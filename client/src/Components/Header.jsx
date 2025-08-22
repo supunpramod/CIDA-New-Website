@@ -76,20 +76,26 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Navigation bar */}
-      <div className="bg-[#8DC63E] w-full">
-        {/* Desktop nav */}
-        <nav className="hidden md:flex justify-end px-10 md:px-16 py-6 space-x-12">
-          {navItems.map((item) => (
-            <a 
-              key={item} 
-              href="#" 
-              className="text-white hover:text-green-100 font-medium text-sm lg:text-base"
-            >
-              {item}
-            </a>
-          ))}
-        </nav>
+     {/* Navigation bar */}
+<div className="bg-[#8DC63E] w-full">
+  {/* Desktop nav */}
+  <nav className="hidden md:flex justify-end px-10 md:px-16 py-6 space-x-12">
+    {navItems.map((item, index) => (
+      <a 
+        key={index} 
+        href="#"
+        className="group relative text-white hover:text-green-100 font-medium text-sm lg:text-base"
+      >
+        {item}
+        {/* Underline animation */}
+        <span
+          className={`absolute left-0 -bottom-1 h-0.5 bg-white transition-all duration-300 w-0 group-hover:w-full`}
+        ></span>
+      </a>
+    ))}
+  </nav>
+</div>
+
 
         {/* Mobile menu */}
         {menuOpen && (
@@ -103,6 +109,10 @@ const Header = () => {
               >
                 {item}
               </a>
+
+              
+
+
             ))}
             <div className="flex justify-center mt-2 pt-2 border-t border-green-100">
               <div className="flex bg-gray-200 rounded overflow-hidden h-8 items-center">
@@ -113,7 +123,7 @@ const Header = () => {
             </div>
           </div>
         )}
-      </div>
+      
     </header>
   );
 };
