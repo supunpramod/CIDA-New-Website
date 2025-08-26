@@ -20,7 +20,7 @@ const HeroSlider = () => {
   }, [slides.length]);
 
   return (
-    <section className="relative pb-15 mb-10">
+    <section className="relative pb-15 mb-10 pt-20">
       <div className="relative h-screen overflow-hidden  ">
         {slides.map((slide, index) => (
           <div
@@ -31,8 +31,8 @@ const HeroSlider = () => {
             style={{ backgroundImage: `url(/src/assets/${slide.image})` }}
 
           >
-            <div className="my-20 mx-100 md:my-8 py-10 flex flex-col md:flex-row items-center justify-between gap-12 px-10 md:px-16">
-  <div className="md:w-1/2 ml-20 mb-2 ">
+            <div className="mx-100 md:my-8  flex flex-col md:flex-row items-center justify-between gap-12 px-10 md:px-16 pt-20">
+  <div className="md:w-1/2 ml-20 mb-2 pt-20 ">
     <div className="mb-5">
       <h1 className="text-6xl  font-bold mb-6 text-white">{slide.title1}
         <span className="text-[#8DC63E]">{slide.titleend}</span>
@@ -92,7 +92,7 @@ const HeroSlider = () => {
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-2 pb-24 mb-20">
+      <div className="absolute bottom-10 left-0 right-0 flex justify-center space-x-2  mb-20">
         {slides.map((_, index) => (
           <button
             key={index}

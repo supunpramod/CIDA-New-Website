@@ -6,12 +6,12 @@ import Logo from "../assets/logo.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const navItems = ["Home", "Services", "Research", "Documents", "Regularity Info", "Industry Info", "Support", "About Us"];
+  const navItems = ["Home", "Services", "Research", "Training & Certification", "Regularity Info", "Industry Info", "Support", "About Us"];
 
   return (
-    <header className="w-full">
+    <header className="w-full  fixed  shadow z-50  ">
       {/* Top header */}
-      <div className="bg-white shadow-sm w-full">
+      <div className="bg-white shadow-sm w-full  ">
         <div className="flex flex-col md:flex-row justify-between items-center px-10 md:px-16 py-2">
           {/* Logos */}
           <div className="flex items-center justify-between w-full md:w-auto">
@@ -77,7 +77,7 @@ const Header = () => {
       </div>
 
      {/* Navigation bar */}
-<div className="bg-[#8DC63E] w-full">
+<div className="bg-[#8DC63E] w-full     ">
   {/* Desktop nav */}
   <nav className="hidden md:flex justify-end px-10 md:px-16 py-6 space-x-12">
     {navItems.map((item, index) => (
