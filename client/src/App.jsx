@@ -6,8 +6,9 @@ import Home from './Components/Home page/Home';
 import Footer from './Components/Footer';
 
 // extra example pages
-// import About from './Components/About';
-// import Contact from './Components/Contact';
+
+import Researchpage from './Components/Researchpage';
+import TrainingandCertification from './Components/Training.jsx';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         {/* Page Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/research" element={<Researchpage />} />
+          <Route path="/trainingandcertification" element={<TrainingandCertification />} />
           
         </Routes>
 
