@@ -19,9 +19,9 @@ const Researchpage = () => {
         {/* Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 text-white  ">
           <h1 className="text-5xl font-bold relative -top-[20px]">
-            Our{" "}
+            Our Research{" "}
             <span className="text-[#8DC63E]">
-              Training & Certifications
+              & Developments
             </span>
           </h1>
           <p className="mt-4 text-lg w-full md:w-3/4 lg:w-2/3">
@@ -38,7 +38,7 @@ const Researchpage = () => {
             >
               Home &gt;{" "}
               <span className="text-[#8DC63E]">
-                Training & Certifications
+                Research
               </span>
             </Link>
           </div>
