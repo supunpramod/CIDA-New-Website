@@ -56,68 +56,192 @@ const Researchpage = () => {
           {/* Research Cards Column */}
           <div className="lg:col-span-2 space-y-8">
             {/* Card 1 */}
-            <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-[#8DC63E] transition-all duration-300 hover:shadow-lg">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Take CIDA example site do this sample</h2>
-              <div className="space-y-3">
-                <p className="font-bold text-gray-900">Totally</p>
-                <ul className="space-y-2 pl-5 list-disc text-gray-700">
-                  <li>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's typesetting industry. Lorem ipsum has also</li>
-                  <li>Sponsored dummy text ever since.</li>
-                </ul>
-              </div>
-              <div className="mt-6">
-                <button className="flex items-center text-[#8DC63E] font-medium hover:text-green-700 transition-colors">
-                  See Note →
-                </button>
-              </div>
-            </div>
+              <div className="max-w-6xl mx-auto p-6 font-sans bg-white rounded-lg shadow-md border-r-4 border-[#8DC63E]">
+      <div className="flex flex-col md:flex-row">
+        {/* Image on the left side */}
+        <div className="md:w-2/5 mb-6 md:mb-0 md:pr-6">
+          <div className="bg-blue-100 rounded-lg overflow-hidden h-full flex items-center justify-center">
+            <svg 
+              className="w-full h-64 object-cover text-blue-400" 
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="100" height="100" fill="currentColor" opacity="0.2" />
+              <path d="M30,30 L70,30 L70,70 L30,70 Z" stroke="currentColor" strokeWidth="2" fill="none" />
+              <circle cx="50" cy="50" r="15" stroke="currentColor" strokeWidth="2" fill="none" />
+              <text x="50" y="52" textAnchor="middle" fill="currentColor" fontSize="12">CIDA Image</text>
+            </svg>
+          </div>
+        </div>
+        
+        {/* Content on the right side */}
+        <div className="md:w-3/5">
+          {/* Header */}
+          <div className="mb-2">
+            <h1 className="text-2xl font-bold text-gray-800">Take CIDA example site</h1>
+            <p className="text-gray-600">do this sample</p>
+          </div>
+          
+          {/* Date */}
+          <div className="mb-4">
+            <p className="text-sm font-medium text-blue-600">23 May 2025</p>
+          </div>
+          
+          {/* Content */}
+          <div className="mb-6">
+            <p className="text-gray-700 leading-relaxed">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's typesetting industry. Lorem Ipsum has be 
+              standard dummy text ever since.
+            </p>
+          </div>
+          
+          {/* See More Link */}
+          <div>
+            <a 
+              href="#" 
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
+            >
+              See More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
             {/* Card 2 */}
-            <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-[#8DC63E] transition-all duration-300 hover:shadow-lg">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Take CIDA example site do this sample</h2>
-              <div className="space-y-3">
-                <p className="font-bold text-gray-900">Totally</p>
-                <ul className="space-y-2 pl-5 list-disc text-gray-700">
-                  <li>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's typesetting industry. Lorem ipsum has also</li>
-                  <li>Sponsored dummy text ever since.</li>
-                </ul>
-              </div>
-              <div className="mt-6">
-                <button className="flex items-center text-[#8DC63E] font-medium hover:text-green-700 transition-colors">
-                  See Note →
-                </button>
-              </div>
-            </div>
+              <div className="max-w-6xl mx-auto p-6 font-sans bg-white rounded-lg shadow-md border-r-4 border-[#8DC63E]">
+      <div className="flex flex-col md:flex-row">
+        {/* Image on the left side */}
+        <div className="md:w-2/5 mb-6 md:mb-0 md:pr-6">
+          <div className="bg-blue-100 rounded-lg overflow-hidden h-full flex items-center justify-center">
+            <svg 
+              className="w-full h-64 object-cover text-blue-400" 
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="100" height="100" fill="currentColor" opacity="0.2" />
+              <path d="M30,30 L70,30 L70,70 L30,70 Z" stroke="currentColor" strokeWidth="2" fill="none" />
+              <circle cx="50" cy="50" r="15" stroke="currentColor" strokeWidth="2" fill="none" />
+              <text x="50" y="52" textAnchor="middle" fill="currentColor" fontSize="12">CIDA Image</text>
+            </svg>
+          </div>
+        </div>
+        
+        {/* Content on the right side */}
+        <div className="md:w-3/5">
+          {/* Header */}
+          <div className="mb-2">
+            <h1 className="text-2xl font-bold text-gray-800">Take CIDA example site</h1>
+            <p className="text-gray-600">do this sample</p>
+          </div>
+          
+          {/* Date */}
+          <div className="mb-4">
+            <p className="text-sm font-medium text-blue-600">23 May 2025</p>
+          </div>
+          
+          {/* Content */}
+          <div className="mb-6">
+            <p className="text-gray-700 leading-relaxed">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's typesetting industry. Lorem Ipsum has be 
+              standard dummy text ever since.
+            </p>
+          </div>
+          
+          {/* See More Link */}
+          <div>
+            <a 
+              href="#" 
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
+            >
+              See More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    
             {/* Card 3 */}
-            <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-[#8DC63E] transition-all duration-300 hover:shadow-lg">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Take CIDA example site do this sample</h2>
-              <div className="space-y-3">
-                <p className="font-bold text-gray-900">Totally</p>
-                <ul className="space-y-2 pl-5 list-disc text-gray-700">
-                  <li>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's typesetting industry. Lorem ipsum has also</li>
-                  <li>Sponsored dummy text ever since.</li>
-                </ul>
-              </div>
-              <div className="mt-6">
-                <button className="flex items-center text-[#8DC63E] font-medium hover:text-green-700 transition-colors">
-                  See Note →
-                </button>
-              </div>
-            </div>
+               <div className="max-w-6xl mx-auto p-6 font-sans bg-white rounded-lg shadow-md border-r-4 border-[#8DC63E]">
+      <div className="flex flex-col md:flex-row">
+        {/* Image on the left side */}
+        <div className="md:w-2/5 mb-6 md:mb-0 md:pr-6">
+          <div className="bg-blue-100 rounded-lg overflow-hidden h-full flex items-center justify-center">
+            <svg 
+              className="w-full h-64 object-cover text-blue-400" 
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="100" height="100" fill="currentColor" opacity="0.2" />
+              <path d="M30,30 L70,30 L70,70 L30,70 Z" stroke="currentColor" strokeWidth="2" fill="none" />
+              <circle cx="50" cy="50" r="15" stroke="currentColor" strokeWidth="2" fill="none" />
+              <text x="50" y="52" textAnchor="middle" fill="currentColor" fontSize="12">CIDA Image</text>
+            </svg>
+          </div>
+        </div>
+        
+        {/* Content on the right side */}
+        <div className="md:w-3/5">
+          {/* Header */}
+          <div className="mb-2">
+            <h1 className="text-2xl font-bold text-gray-800">Take CIDA example site</h1>
+            <p className="text-gray-600">do this sample</p>
+          </div>
+          
+          {/* Date */}
+          <div className="mb-4">
+            <p className="text-sm font-medium text-blue-600">23 May 2025</p>
+          </div>
+          
+          {/* Content */}
+          <div className="mb-6">
+            <p className="text-gray-700 leading-relaxed">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's typesetting industry. Lorem Ipsum has be 
+              standard dummy text ever since.
+            </p>
+          </div>
+          
+          {/* See More Link */}
+          <div>
+            <a 
+              href="#" 
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
+            >
+              See More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
           </div>
 
+
+
+
+
+          
+
+
+
+
+          
+
           {/* Search Sidebar */}
-          <div className="bg-white rounded-2xl shadow-lg p-6  top-24 h-fit">
+          <div className="bg-[#CDCDCD]  shadow-lg p-6 pr-30 top-24 h-fit bg-opacity-30 ">
+  
+
+  {/* Category Section */}
   {/* Search */}
   <div className="w-full mb-6">
     <SearchPill />
   </div>
-
-  {/* Category Section */}
   <div className="mb-8">
-    <h4 className="text-lg font-semibold text-gray-800 mb-3">Category</h4>
-    <p className="text-sm text-gray-600 leading-relaxed">
+    <h4 className="text-lg font-semibold text-[#818285] mb-3">Category</h4>
+    <p className="text-sm text-[#818285] leading-relaxed">
       Use either our existing versions, due to real considerations or license
       statement and us display an examination.
     </p>
@@ -125,12 +249,12 @@ const Researchpage = () => {
 
   {/* Science Section */}
   <div>
-    <h4 className="text-lg font-semibold text-gray-800 mb-4">Science</h4>
+    <h4 className="text-lg font-semibold text-[#818285] mb-4">Science</h4>
     <ul className="space-y-2">
       {["Technology", "Constructions", "Mechanical", "News"].map((item) => (
         <li
           key={item}
-          className="text-gray-600 hover:text-[#8DC63E] cursor-pointer transition-all duration-200 pl-3 border-l-2 border-transparent hover:border-[#8DC63E]"
+          className="text-[#818285] hover:text-[#8DC63E] cursor-pointer transition-all duration-200 pl-3 border-l-2 border-transparent hover:border-[#8DC63E]"
         >
           {item}
         </li>
@@ -150,14 +274,14 @@ export default Researchpage;
 
 function SearchPill() {
   return (
-    <div className="relative w-[400px]">   {/* 👈 මෙතන w-[400px] දාලා custom width */}
+    <div className="relative w-full">   {/* 👈 Sidebar box width ekata fit wenawa */}
       <label className="sr-only">Search</label>
       <input
         type="text"
         placeholder="Search your thinks"
-        className="bg-gray-200 h-11 w-full rounded-full pl-5 pr-16 text-gray-700
+        className="bg-gray-100 h-11 w-full rounded-full pl-5 pr-16 text-gray-700
                    placeholder:text-gray-400
-                   focus:outline-none focus:ring-2 focus:ring-lime-500 mr-5"
+                   focus:outline-none focus:ring-2 focus:ring-lime-500"
       />
       <button
         type="button"
