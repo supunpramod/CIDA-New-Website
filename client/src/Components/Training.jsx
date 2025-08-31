@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, ChevronDown, Search as SearchIcon } from "lucide-react";
+import Image10 from "../assets/image10.png";
+import Image11 from "../assets/image11.png";
+import Image12 from "../assets/image12.png";
 
 export default function TrainingandCertification() {
   const [active, setActive] = useState("training");
@@ -33,30 +36,30 @@ export default function TrainingandCertification() {
       content: (
         <>
           {/* Filters + Search */}
-          <div className="px-6">
+          <div className="px-6 ">
             <FilterBar />
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 py-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6  py-10">
             {[
               {
                 id: 1,
                 title: "Machine Repairing",
                 desc: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
-                img: "/WebsiteImages/image2.png",
+                img: Image10,
               },
               {
                 id: 2,
                 title: "Machine Repairing",
                 desc: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
-                img: "/WebsiteImages/image 10 (3).png",
+                img: Image11,
               },
               {
                 id: 3,
                 title: "Machine Repairing",
                 desc: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
-                img: "/WebsiteImages/image 10 (4).png",
+                img: Image12,
               },
 
 
@@ -64,7 +67,7 @@ export default function TrainingandCertification() {
                 id: 4,
                 title: "Machine Repairing",
                 desc: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
-                img: "/WebsiteImages/image2.png",
+                img: Image10,
               },
 
 
@@ -72,7 +75,7 @@ export default function TrainingandCertification() {
                 id: 5,
                 title: "Machine Repairing",
                 desc: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
-                img: "/WebsiteImages/image2.png",
+                img: Image11,
               },
 
 
@@ -80,7 +83,7 @@ export default function TrainingandCertification() {
                 id: 6,
                 title: "Machine Repairing",
                 desc: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
-                img: "/WebsiteImages/image2.png",
+                img: Image12,
               },
 
 
@@ -88,7 +91,7 @@ export default function TrainingandCertification() {
             ].map((card) => (
               <div
                 key={card.id}
-                className="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition max-w-[400px] mb-10 mx-auto"
+                className="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition max-w-[400px] mb-10 mx-auto "
               >
                 <img
                   src={card.img}
@@ -120,7 +123,7 @@ export default function TrainingandCertification() {
   ];
 
   return (
-    <div className="w-full  pt-36">
+    <div className="w-full  pt-36  ">
       {/* ================= Banner Section ================= */}
       <div className="relative w-full h-[300px]">
         <img
@@ -146,7 +149,7 @@ export default function TrainingandCertification() {
       </div>
 
       {/* ================= Pill Tabs ================= */}
-      <div className="mt-10 w-full px-6">
+      <div className="mt-10 w-full  px-10 md:px-16">
         <div
           role="tablist"
           aria-label="Learning navigation"
@@ -181,7 +184,7 @@ export default function TrainingandCertification() {
         </div>
 
         {/* Tabs Content */}
-        <div className="py-4 text-sm text-gray-700">
+        <div className="py-4 text-sm text-gray-700 ">
           {tabs.map((t) => (
             <section
               key={t.id}
