@@ -4,7 +4,7 @@ import research1 from "../assets/research1.png";
 import research2 from "../assets/research2.png";
 import research3 from "../assets/research3.png";
 
-import {  Search as SearchIcon } from "lucide-react";
+import {  ArrowRight,Search as SearchIcon } from "lucide-react";
 
 const Researchpage = () => {
   return (
@@ -73,8 +73,8 @@ const Researchpage = () => {
         <div className="md:w-3/5">
           {/* Header */}
           <div className="mb-2">
-            <h1 className="text-2xl font-bold text-gray-800">Take CIDA example site</h1>
-            <p className="text-gray-600">do this sample</p>
+            <h1 className="text-4xl font-semibold text-[#8DC63E]">Take CIDA example site</h1>
+            <h1 className="text-4xl font-semibold text-[#8DC63E]">do this sample</h1>
           </div>
           
           {/* Date */}
@@ -84,7 +84,7 @@ const Researchpage = () => {
           
           {/* Content */}
           <div className="mb-6">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-black leading-relaxed">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's typesetting industry. Lorem Ipsum has be 
               standard dummy text ever since.
@@ -93,12 +93,9 @@ const Researchpage = () => {
           
           {/* See More Link */}
           <div>
-            <a 
-              href="#" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
-            >
-              See More →
-            </a>
+            <button className="mt-4 flex items-center gap-2 px-7 py-2 bg-white text-[#8DC63E] rounded-full hover:bg-[#77a92f] transition border-2 border-[#8DC63E]" >
+                    See More <ArrowRight size={16} />
+                  </button>
           </div>
         </div>
       </div>
@@ -118,8 +115,8 @@ const Researchpage = () => {
         <div className="md:w-3/5">
           {/* Header */}
           <div className="mb-2">
-            <h1 className="text-2xl font-bold text-gray-800">Take CIDA example site</h1>
-            <p className="text-gray-600">do this sample</p>
+            <h1 className="text-4xl font-semibold text-[#8DC63E]">Take CIDA example site</h1>
+            <h1 className="text-4xl font-semibold text-[#8DC63E]">do this sample</h1>
           </div>
           
           {/* Date */}
@@ -129,7 +126,7 @@ const Researchpage = () => {
           
           {/* Content */}
           <div className="mb-6">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-black leading-relaxed">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's typesetting industry. Lorem Ipsum has be 
               standard dummy text ever since.
@@ -138,12 +135,9 @@ const Researchpage = () => {
           
           {/* See More Link */}
           <div>
-            <a 
-              href="#" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
-            >
-              See More →
-            </a>
+            <button className="mt-4 flex items-center gap-2 px-7 py-2 bg-white text-[#8DC63E] rounded-full hover:bg-[#77a92f] transition border-2 border-[#8DC63E]" >
+                    See More <ArrowRight size={16} />
+                  </button>
           </div>
         </div>
       </div>
@@ -164,8 +158,8 @@ const Researchpage = () => {
         <div className="md:w-3/5">
           {/* Header */}
           <div className="mb-2">
-            <h1 className="text-2xl font-bold text-gray-800">Take CIDA example site</h1>
-            <p className="text-gray-600">do this sample</p>
+            <h1 className="text-4xl font-semibold text-[#8DC63E]">Take CIDA example site</h1>
+            <h1 className="text-4xl font-semibold text-[#8DC63E]">do this sample</h1>
           </div>
           
           {/* Date */}
@@ -175,7 +169,7 @@ const Researchpage = () => {
           
           {/* Content */}
           <div className="mb-6">
-            <p className="text-gray-700 leading-relaxed">
+           <p className="text-black leading-relaxed">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's typesetting industry. Lorem Ipsum has be 
               standard dummy text ever since.
@@ -184,12 +178,9 @@ const Researchpage = () => {
           
           {/* See More Link */}
           <div>
-            <a 
-              href="#" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
-            >
-              See More →
-            </a>
+            <button className="mt-4 flex items-center gap-2 px-7 py-2 bg-white text-[#8DC63E] rounded-full hover:bg-[#77a92f] transition border-2 border-[#8DC63E]" >
+                    See More <ArrowRight size={16} />
+                  </button>
           </div>
         </div>
       </div>
