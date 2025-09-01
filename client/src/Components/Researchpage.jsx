@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import research1 from "../assets/research1.png";
+import research2 from "../assets/research2.png";
+import research3 from "../assets/research3.png";
 
 import {  Search as SearchIcon } from "lucide-react";
 
@@ -55,22 +58,14 @@ const Researchpage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Research Cards Column */}
           <div className="lg:col-span-2 space-y-8">
+
             {/* Card 1 */}
               <div className="max-w-6xl mx-auto p-6 font-sans bg-white rounded-lg shadow-md border-r-4 border-[#8DC63E]">
       <div className="flex flex-col md:flex-row">
         {/* Image on the left side */}
         <div className="md:w-2/5 mb-6 md:mb-0 md:pr-6">
           <div className="bg-blue-100 rounded-lg overflow-hidden h-full flex items-center justify-center">
-            <svg 
-              className="w-full h-64 object-cover text-blue-400" 
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="100" height="100" fill="currentColor" opacity="0.2" />
-              <path d="M30,30 L70,30 L70,70 L30,70 Z" stroke="currentColor" strokeWidth="2" fill="none" />
-              <circle cx="50" cy="50" r="15" stroke="currentColor" strokeWidth="2" fill="none" />
-              <text x="50" y="52" textAnchor="middle" fill="currentColor" fontSize="12">CIDA Image</text>
-            </svg>
+            <img src={research1} alt="Image" className="w-full h-full object-cover" />
           </div>
         </div>
         
@@ -84,7 +79,7 @@ const Researchpage = () => {
           
           {/* Date */}
           <div className="mb-4">
-            <p className="text-sm font-medium text-blue-600">23 May 2025</p>
+            <p className="text-sm font-medium text-[#818285]">23 May 2025</p>
           </div>
           
           {/* Content */}
@@ -115,16 +110,7 @@ const Researchpage = () => {
         {/* Image on the left side */}
         <div className="md:w-2/5 mb-6 md:mb-0 md:pr-6">
           <div className="bg-blue-100 rounded-lg overflow-hidden h-full flex items-center justify-center">
-            <svg 
-              className="w-full h-64 object-cover text-blue-400" 
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="100" height="100" fill="currentColor" opacity="0.2" />
-              <path d="M30,30 L70,30 L70,70 L30,70 Z" stroke="currentColor" strokeWidth="2" fill="none" />
-              <circle cx="50" cy="50" r="15" stroke="currentColor" strokeWidth="2" fill="none" />
-              <text x="50" y="52" textAnchor="middle" fill="currentColor" fontSize="12">CIDA Image</text>
-            </svg>
+            <img src={research2} alt="Image" className="w-full h-full object-cover" />
           </div>
         </div>
         
@@ -138,7 +124,7 @@ const Researchpage = () => {
           
           {/* Date */}
           <div className="mb-4">
-            <p className="text-sm font-medium text-blue-600">23 May 2025</p>
+            <p className="text-sm font-medium text-[#818285]">23 May 2025</p>
           </div>
           
           {/* Content */}
@@ -170,16 +156,7 @@ const Researchpage = () => {
         {/* Image on the left side */}
         <div className="md:w-2/5 mb-6 md:mb-0 md:pr-6">
           <div className="bg-blue-100 rounded-lg overflow-hidden h-full flex items-center justify-center">
-            <svg 
-              className="w-full h-64 object-cover text-blue-400" 
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="100" height="100" fill="currentColor" opacity="0.2" />
-              <path d="M30,30 L70,30 L70,70 L30,70 Z" stroke="currentColor" strokeWidth="2" fill="none" />
-              <circle cx="50" cy="50" r="15" stroke="currentColor" strokeWidth="2" fill="none" />
-              <text x="50" y="52" textAnchor="middle" fill="currentColor" fontSize="12">CIDA Image</text>
-            </svg>
+            <img src={research3} alt="Image" className="w-full h-full object-cover" />
           </div>
         </div>
         
@@ -193,7 +170,7 @@ const Researchpage = () => {
           
           {/* Date */}
           <div className="mb-4">
-            <p className="text-sm font-medium text-blue-600">23 May 2025</p>
+            <p className="text-sm font-medium text-[#818285]">23 May 2025</p>
           </div>
           
           {/* Content */}
