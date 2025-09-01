@@ -8,9 +8,9 @@ import {  ArrowRight,Search as SearchIcon } from "lucide-react";
 
 const Researchpage = () => {
   return (
-    <div className="w-full  pt-36 ">
+    <div className="w-full  pt-36  ">
       {/* ================= Banner Section ================= */}
-      <div className="relative w-full h-[300px]">
+      <div className="relative w-full h-[300px] ">
         {/* Background Image */}
         <img
           src="/WebsiteImages/Rectangle 1390.png"
@@ -51,11 +51,11 @@ const Researchpage = () => {
       </div>
 
       {/* ================= Research Content Section ================= */}
-      <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className=" mx-auto py-12  px-10 md:px-16 ">
         {/* Introduction Section */}
         
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 ">
           {/* Research Cards Column */}
           <div className="lg:col-span-2 space-y-8">
 
@@ -73,7 +73,7 @@ const Researchpage = () => {
         <div className="md:w-3/5">
           {/* Header */}
           <div className="mb-2">
-            <h1 className="text-4xl font-semibold text-[#8DC63E]">Take CIDA example site</h1>
+            <h1 className="text-4xl font-semibold text-[#8DC63E] ">Take CIDA example site</h1>
             <h1 className="text-4xl font-semibold text-[#8DC63E]">do this sample</h1>
           </div>
           
@@ -247,7 +247,7 @@ function SearchPill() {
       <input
         type="text"
         placeholder="Search your thinks"
-        className="bg-gray-100 h-11 w-full rounded-full pl-5 pr-16 text-gray-700
+        className="bg-[#D9D9D9] h-11 w-full rounded-full pl-5 pr-16 text-[#9F9F9F]
                    placeholder:text-gray-400
                    focus:outline-none focus:ring-2 focus:ring-lime-500"
       />
