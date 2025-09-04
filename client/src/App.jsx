@@ -12,6 +12,7 @@ import Support from './Components/Support.jsx';
 import Researchpage from './Components/Researchpage';
 import TrainingandCertification from './Components/Training.jsx';
 import RegularityInfo from './Components/RegularityInfo.jsx';
+import  AboutUs from './Components/AboutUs.jsx';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/trainingandcertification" element={<TrainingandCertification />} />
           <Route path="/support" element={<Support />} />
           <Route path="/regularityinfo" element={<RegularityInfo />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           
         </Routes>
 

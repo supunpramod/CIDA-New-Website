@@ -66,9 +66,9 @@ const Support = () => {
         {/* Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 text-white">
           <h1 className="text-5xl font-bold relative -top-[20px]">
-            Our Research{" "}
+           Support{" "}
             <span className="text-[#8DC63E]">
-              & Developments
+             Us
             </span>
           </h1>
           <p className="mt-4 text-lg w-full md:w-3/4 lg:w-2/3">
