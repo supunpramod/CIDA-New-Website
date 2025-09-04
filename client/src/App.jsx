@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Home from './Components/Home page/Home';
 import Footer from './Components/Footer';
+import Support from './Components/Support.jsx';
+
 
 // extra example pages
 
@@ -22,6 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/research" element={<Researchpage />} />
           <Route path="/trainingandcertification" element={<TrainingandCertification />} />
+          <Route path="/support" element={<Support />} />
           
         </Routes>
 

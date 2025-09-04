@@ -15,7 +15,7 @@ const Header = () => {
     { label: "Training & Certification", path: "/trainingandcertification" },
     { label: "Regularity Info", path: "/" },
     { label: "Industry Info", path: "/" },
-    { label: "Support", path: "/" },
+    { label: "Support", path: "/support" },
     { label: "About Us", path: "/" },
   ];
 
