@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 
 import { FaPhoneAlt, FaFax, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import Bannercover1 from "../assets/bannercover1.png";
 
 
 
@@ -54,7 +55,7 @@ const Support = () => {
         <div className="relative w-full h-[300px] ">
         {/* Background Image */}
         <img
-          src="/WebsiteImages/Rectangle 1390.png"
+          src={Bannercover1}
           alt="Training Certificate"
           className="w-full h-full object-cover"
         />
