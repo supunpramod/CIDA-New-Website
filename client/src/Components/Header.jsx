@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, Clock, Menu, X } from 'lucide-react';
-import GovernmentLogo from "../assets/Sri_Lanka_Government2.png";
+import GovernmentLogo from "../assets/govelogoo.png";
 import SrilankaFlag from "../assets/Srilanka_flag.png";
 import Logo from "../assets/logo.png";
 import { Link } from 'react-router-dom';
@@ -27,8 +27,9 @@ const Header = () => {
           {/* Logos */}
           <div className="flex items-center justify-between w-full md:w-auto">
             <div className="flex items-center space-x-2 md:space-x-3">
-              <img src={Logo} alt="Main Logo" className="h-10 md:h-14 w-auto" />
-              <img src={GovernmentLogo} alt="Government Logo" className="h-12 md:h-16 w-auto pb-1" />
+              <img src={GovernmentLogo} alt="Government Logo" className="h-10 md:h-14 w-auto pb-1" />
+              <img src={Logo} alt="Main Logo" className="h-8 md:h-12 w-auto" />
+              
             </div>
 
             {/* Mobile menu button */}
@@ -89,7 +90,7 @@ const Header = () => {
       {/* Navigation bar */}
       <div className="bg-[#8DC63E] w-full ">
         {/* Desktop nav */}
-        <nav className="hidden md:flex justify-end px-10 md:px-16 py-5 space-x-12">
+        <nav className="hidden md:flex justify-end px-10 md:px-16 py-6 space-x-12">
           {navItems.map((item, index) => (
             <Link
               key={index}

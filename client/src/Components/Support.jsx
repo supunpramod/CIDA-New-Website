@@ -219,7 +219,7 @@ const Support = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-12 ">
+      <section className="py-15  ">
         <iframe
           className="w-full h-72 border-0"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.759004559543!2d79.86135311428273!3d6.927079295574059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259da9c3b3b8f%3A0xf5420ed85eb33dbf!2sConstruction%20Industry%20Development%20Authority!5e0!3m2!1sen!2slk!4v1623891910882!5m2!1sen!2slk"

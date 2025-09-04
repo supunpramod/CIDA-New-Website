@@ -4,6 +4,7 @@ import { ArrowRight, ChevronDown, Search as SearchIcon } from "lucide-react";
 import Image10 from "../assets/image10.png";
 import Image11 from "../assets/image11.png";
 import Image12 from "../assets/image12.png";
+import Bannercover from "../assets/bannercover.png";
 
 export default function TrainingandCertification() {
   const [active, setActive] = useState("training");
@@ -127,7 +128,7 @@ export default function TrainingandCertification() {
       {/* ================= Banner Section ================= */}
       <div className="relative w-full h-[300px]">
         <img
-          src="/WebsiteImages/Rectangle 1390.png"
+          src={Bannercover}
           alt="Training Certificate"
           className="w-full h-full object-cover"
         />
