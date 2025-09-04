@@ -1,131 +1,26 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+import react from "react";
+
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronDown, Search as SearchIcon } from "lucide-react";
-import Image10 from "../assets/image10.png";
-import Image11 from "../assets/image11.png";
-import Image12 from "../assets/image12.png";
-import Bannercover from "../assets/bannercover.png";
+import Bannercover from "../assets/Bannercover.png";
 
-export default function TrainingandCertification() {
-  const [active, setActive] = useState("training");
-  const tabRefs = useRef([]);
+const TrainingandCertification = () => {
+  const [activeTab, setActiveTab] = useState("training");
+  const [currentPage] = useState(1);
+  const itemsPerPage = 5;
 
-  // ================= Keyboard navigation =================
-  const focusTab = (i) => tabRefs.current[i]?.focus();
-
-  const onKeyDown = (e, i) => {
-    const tabs = ["training", "cert"];
-    const last = tabs.length - 1;
-    let next = i;
-
-    if (e.key === "ArrowRight") next = i === last ? 0 : i + 1;
-    if (e.key === "ArrowLeft") next = i === 0 ? last : i - 1;
-    if (e.key === "Home") next = 0;
-    if (e.key === "End") next = last;
-
-    if (next !== i) {
-      e.preventDefault();
-      setActive(tabs[next]);
-      requestAnimationFrame(() => focusTab(next));
-    }
-  };
-
-  const tabs = [
-    {
-      id: "training",
-      label: "Training Programs",
-      content: (
-        <>
-          {/* Filters + Search */}
-          <div className="px-6 ">
-            <FilterBar />
-          </div>
-
-          {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6  py-10">
-            {[
-              {
-                id: 1,
-                title: "Machine Repairing",
-                desc: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
-                img: Image10,
-              },
-              {
-                id: 2,
-                title: "Machine Repairing",
-                desc: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
-                img: Image11,
-              },
-              {
-                id: 3,
-                title: "Machine Repairing",
-                desc: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
-                img: Image12,
-              },
-
-
-                            {
-                id: 4,
-                title: "Machine Repairing",
-                desc: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
-                img: Image10,
-              },
-
-
-                            {
-                id: 5,
-                title: "Machine Repairing",
-                desc: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
-                img: Image11,
-              },
-
-
-                            {
-                id: 6,
-                title: "Machine Repairing",
-                desc: "Ut enim ad minim veniam, quis nost exercitation ullamco laboris nisi ut aliquip ex commodo.",
-                img: Image12,
-              },
-
-
-
-            ].map((card) => (
-              <div
-                key={card.id}
-                className="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition max-w-[400px] mb-10 mx-auto "
-              >
-                <img
-                  src={card.img}
-                  alt={card.title}
-                  className="w-full h-56 object-cover"
-                />
-                <div className="p-5">
-                  <h3 className="text-lg font-semibold text-gray-800">{card.title}</h3>
-                  <p className="text-gray-500 text-sm mt-2">{card.desc}</p>
-                  <button className="mt-4 flex items-center gap-2 px-4 py-2 bg-[#8DC63E] text-white rounded-full hover:bg-[#77a92f] transition">
-                    See More <ArrowRight size={16} />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </>
-      ),
-    },
-    {
-      id: "cert",
-      label: "Certification Tracking",
-      content: (
-        <div className="px-6 py-10 text-gray-600">
-          Certification tracking content…
-        </div>
-      ),
-    },
-  ];
+  // Dummy training data (25 items → 5 pages)
+  const trainingData = Array.from({ length: 25 }, (_, i) => ({
+    id: i + 1,
+    title: "Machine Repairing",
+    description:
+      "Ut enim ad minim veniam, quis nostr exercitation ullamco laboris nisi ut aliquip ex commodo.",
+    image: `/WebsiteImages/image${(i % 3) + 1}.png`,
+  }));
 
   return (
-    <div className="w-full  pt-36  ">
-      {/* ================= Banner Section ================= */}
+    <div className="w-full  pt-36">
+      {/* ===== Banner Full Width ===== */}
       <div className="relative w-full h-[300px]">
         <img
           src={Bannercover}
@@ -149,124 +44,165 @@ export default function TrainingandCertification() {
         </div>
       </div>
 
-      {/* ================= Pill Tabs ================= */}
-      <div className="mt-10 w-full  px-10 md:px-16">
-        <div
-          role="tablist"
-          aria-label="Learning navigation"
-          className="flex items-center gap-3 border-b border-lime-300"
-        >
-          {tabs.map((t, i) => {
-            const isActive = t.id === active;
-            return (
-              <button
-                key={t.id}
-                id={`tab-${t.id}`}
-                role="tab"
-                ref={(el) => (tabRefs.current[i] = el)}
-                aria-selected={isActive}
-                aria-controls={`panel-${t.id}`}
-                tabIndex={isActive ? 0 : -1}
-                onClick={() => setActive(t.id)}
-                onKeyDown={(e) => onKeyDown(e, i)}
-                className={[
-                  "-mb-px rounded-md px-3 py-1.5 text-sm font-semibold transition-colors",
-                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#72a93a] focus-visible:ring-offset-2",
-                  isActive
-                    ? "bg-lime-100 text-lime-700"
-                    : "text-gray-400 hover:text-gray-600",
-                ].join(" ")}
-              >
-                {t.label}
-              </button>
-            );
-          })}
-          <div className="flex-1" />
-        </div>
 
-        {/* Tabs Content */}
-        <div className="py-4 text-sm text-gray-700 ">
-          {tabs.map((t) => (
-            <section
-              key={t.id}
-              id={`panel-${t.id}`}
-              role="tabpanel"
-              aria-labelledby={`tab-${t.id}`}
-              hidden={t.id !== active}
+
+
+      {/* ===== Main Content ===== */}
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        {/* ===== Tabs ===== */}
+        <div className="flex border-b border-[#8DC63E] mb-4">
+          {[
+            { id: "training", label: "Training Programs" },
+            { id: "cert", label: "Certification Tracking" },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              className={`px-4 py-2 text-sm font-medium rounded-t-md transition-colors duration-200 ${
+                activeTab === tab.id
+                  ? "text-[#8DC63E] bg-[#F0F9F0]"
+                  : "text-gray-400 hover:text-gray-600"
+              }`}
+              onClick={() => setActiveTab(tab.id)}
             >
-              {t.id === active ? t.content : null}
-            </section>
+              {tab.label}
+            </button>
           ))}
         </div>
+
+        {/* ===== Tab Content ===== */}
+        {activeTab === "training" && (
+          <>
+            {/* ==== Filter Section ==== */}
+            <div className="flex flex-wrap gap-3 my-4">
+              {[1, 2, 3].map((i) => (
+                <div className="relative" key={i}>
+                  <select className="appearance-none bg-gray-200 text-gray-700 py-2 px-4 pr-8 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option>Select Here Filter</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    ▼
+                  </div>
+                </div>
+              ))}
+              <div className="relative flex-grow">
+                <input
+                  type="text"
+                  placeholder="Search your things"
+                  className="w-full bg-gray-200 text-gray-700 py-2 px-4 pr-10 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+                <button className="absolute right-0 top-0 h-full bg-[#8DC63E] text-white px-4 rounded-r-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                  🔍
+                </button>
+              </div>
+            </div>
+
+            {/* ==== Courses Grid ==== */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+              {trainingData
+                .slice(
+                  (currentPage - 1) * itemsPerPage,
+                  currentPage * itemsPerPage
+                )
+                .map((course) => (
+                  <div
+                    key={course.id}
+                    className="bg-white rounded-lg overflow-hidden shadow border border-gray-200"
+                  >
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-4">
+                      <h3 className="font-medium text-gray-900">
+                        {course.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 mt-1">
+                        {course.description}
+                      </p>
+                      <div className="mt-4">
+                        <button className="inline-flex items-center px-3 py-1 bg-[#8DC63E] text-white text-sm font-medium rounded-full hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                          See More ➔
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </div>
+
+            {/* ==== Pagination ==== */}
+            <div className="flex justify-center mt-8 space-x-2">
+              <button className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300">
+                <p>&lt;</p>
+              </button>
+              {[...Array(Math.ceil(trainingData.length / itemsPerPage))].map(
+                (_, i) => (
+                  <button
+                    key={i}
+                    className={`w-8 h-8 flex items-center justify-center rounded-full ${
+                      currentPage === i + 1
+                        ? "bg-[#8DC63E] text-white"
+                        : "bg-gray-200 text-gray-600 hover:bg-gray-300"
+                    }`}
+                  >
+                    {i + 1}
+                  </button>
+                )
+              )}
+              <button className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300">
+                <p>&gt;</p>
+              </button>
+            </div>
+          </>
+        )}
+
+        {/* ==== Certification Tracking ==== */}
+        {activeTab === "cert" && (
+          <div className="max-w-6xl mx-auto px-4 py-8">
+            <div className="border border-blue-400 rounded-lg p-6 mb-8">
+              <h2 className="text-[#8DC63E] text-center mb-2">
+                Explore Your Certificates
+              </h2>
+              <h1 className="text-4xl text-gray-600 text-center mb-4">
+                Search Your Certification
+              </h1>
+              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                Enter your certificate ID or registration number to track the
+                status of your certifications in real time.
+              </p>
+              <div className="flex justify-center mb-4">
+                <div className="relative w-full max-w-md">
+                  <input
+                    type="text"
+                    placeholder="Enter Certificate ID"
+                    className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none"
+                  />
+                  <button className="absolute right-0 top-0 h-full bg-[#8DC63E] text-white px-4 rounded-r-full">
+                    <i className="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <button className="px-8 py-2 border border-[#8DC63E] text-[#8DC63E] rounded-full hover:bg-green-50 transition duration-200">
+                  Track
+                </button>
+              </div>
+            </div>
+            <div className="flex justify-center mt-10">
+              <img
+                src="https://placehold.co/800x300/fef2f2/cccccc?text=Certificate+Search+Illustration"
+                alt="Certificate search illustration"
+                className="max-w-full h-auto"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
-}
+};
 
-/* ============ Small UI Pieces ============ */
-
-function FilterBar() {
-  return (
-    <div className="flex flex-wrap items-center justify-center gap-6 py-8">
-      {/* Filters */}
-      <SelectPill placeholder="Filter 1" />
-      <SelectPill placeholder="Filter 2" />
-      <SelectPill placeholder="Filter 3" />
-
-      {/* Search */}
-      <div className="w-full md:w-auto">
-        <SearchPill />
-      </div>
-    </div>
-  );
-}
-
-function SelectPill({ placeholder = "Select Here Filter" }) {
-  return (
-    <div className="relative">
-      <label className="sr-only">Filter</label>
-      <select
-        defaultValue=""
-        className="appearance-none bg-gray-200 text-gray-500 placeholder-gray-400
-                   h-11 min-w-[220px] rounded-full pl-4 pr-10
-                   focus:outline-none focus:ring-2 focus:ring-lime-500"
-      >
-        <option value="" disabled>
-          {placeholder}
-        </option>
-        <option>Option 1</option>
-        <option>Option 2</option>
-        <option>Option 3</option>
-      </select>
-      <ChevronDown
-        size={18}
-        className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
-      />
-    </div>
-  );
-}
-
-function SearchPill() {
-  return (
-    <div className="relative w-[400px]">   {/* 👈 මෙතන w-[400px] දාලා custom width */}
-      <label className="sr-only">Search</label>
-      <input
-        type="text"
-        placeholder="Search your thinks"
-        className="bg-gray-200 h-11 w-full rounded-full pl-5 pr-16 text-gray-700
-                   placeholder:text-gray-400
-                   focus:outline-none focus:ring-2 focus:ring-lime-500 mr-5"
-      />
-      <button
-        type="button"
-        aria-label="Search"
-        className="absolute right-1 top-1/2 -translate-y-1/2
-                   w-10 h-10 rounded-full bg-lime-500 text-white
-                   grid place-items-center shadow
-                   hover:bg-lime-600 focus:outline-none focus:ring-2 focus:ring-lime-500"
-      >
-        <SearchIcon size={18} />
-      </button>
-    </div>
-  );
-}
+export default TrainingandCertification;
