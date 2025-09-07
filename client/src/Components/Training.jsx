@@ -3,6 +3,9 @@ import react from "react";
 
 import { Link } from "react-router-dom";
 import Bannercover from "../assets/Bannercover.png";
+import Research1 from "../assets/research3.png";
+
+const images = [Research1, Research1, Research1];
 
 const TrainingandCertification = () => {
   const [activeTab, setActiveTab] = useState("training");
@@ -10,13 +13,13 @@ const TrainingandCertification = () => {
   const itemsPerPage = 5;
 
   // Dummy training data (25 items → 5 pages)
-  const trainingData = Array.from({ length: 25 }, (_, i) => ({
-    id: i + 1,
-    title: "Machine Repairing",
-    description:
-      "Ut enim ad minim veniam, quis nostr exercitation ullamco laboris nisi ut aliquip ex commodo.",
-    image: `/WebsiteImages/image${(i % 3) + 1}.png`,
-  }));
+ const trainingData = Array.from({ length: 25 }, (_, i) => ({
+  id: i + 1,
+  title: "Machine Repairing",
+  description:
+    "Ut enim ad minim veniam, quis nostr exercitation ullamco laboris nisi ut aliquip ex commodo.",
+  image: images[i % images.length], // cycle through images
+}));
 
   return (
     <div className="w-full  pt-36">
@@ -76,7 +79,7 @@ const TrainingandCertification = () => {
             <div className="flex flex-wrap gap-3 my-4">
               {[1, 2, 3].map((i) => (
                 <div className="relative" key={i}>
-                  <select className="appearance-none bg-gray-200 text-gray-700 py-2 px-4 pr-8 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                  <select className="appearance-none bg-[#D9D9D9] text-[#9F9F9F] py-2 px-4 pr-8 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500">
                     <option>Select Here Filter</option>
                     <option>Option 1</option>
                     <option>Option 2</option>
@@ -109,12 +112,12 @@ const TrainingandCertification = () => {
                 .map((course) => (
                   <div
                     key={course.id}
-                    className="bg-white rounded-lg overflow-hidden shadow border border-gray-200"
+                    className="bg-white rounded-2xl overflow-hidden shadow border border-gray-200"
                   >
                     <img
                       src={course.image}
                       alt={course.title}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-48 object-cover p-2 rounded-2xl"
                     />
                     <div className="p-4">
                       <h3 className="font-medium text-gray-900">
