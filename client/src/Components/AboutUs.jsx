@@ -5,13 +5,13 @@ import image3 from "../assets/Group 6846.png";
 import image4 from "../assets/Group 6845.png";
 import image5 from "../assets/Group 6848.png";
 import { Link } from "react-router-dom";
-import Research1 from "../assets/research3.png";
+import Aboutpic from "../assets/about.png";
 
-const images = [Research1, Research1, Research1];
+const images = [Aboutpic, Aboutpic, Aboutpic];
 
 const trainingData = Array.from({ length: 25 }, (_, i) => ({
   id: i + 1,
-  title: "Machine Repairing",
+  title: "CIDA Award Program",
   description:
     "Ut enim ad minim veniam, quis nostr exercitation ullamco laboris nisi ut aliquip ex commodo.",
   image: images[i % images.length], // cycle through images
@@ -164,16 +164,16 @@ const AboutUs = () => {
         </div>
 
         {/* 🟢 Training Data Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 ">
           {paginatedData.map((course) => (
             <div
               key={course.id}
-              className="bg-white rounded-2xl overflow-hidden shadow border border-gray-200"
+              className="bg-white rounded-2xl overflow-hidden shadow border border-gray-200 "
             >
               <img
                 src={course.image}
                 alt={course.title}
-                className="w-full h-48 object-cover p-2 rounded-2xl"
+                className="w-full h-49 object-cover p-2 rounded-2xl"
               />
               <div className="p-4">
                 <h3 className="font-medium text-gray-900">{course.title}</h3>
