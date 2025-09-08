@@ -7,6 +7,12 @@ import image5 from "../assets/Group 6848.png";
 import { Link } from "react-router-dom";
 import Aboutpic from "../assets/about.png";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper/modules";
+
+
 const images = [Aboutpic, Aboutpic, Aboutpic];
 
 const trainingData = Array.from({ length: 25 }, (_, i) => ({
@@ -128,28 +134,55 @@ const AboutUs = () => {
           </div>
 
           {/* Awards Section */}
-          <div className="bg-purple-700 text-white py-12">
-            <div className="container mx-auto px-4">
-              <div className="flex flex-col md:flex-row items-center justify-between">
-                <div className="md:w-1/2 mb-8 md:mb-0">
-                  <h2 className="text-3xl font-bold mb-4">Apply Your Awards</h2>
-                  <p className="mb-6 max-w-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                  </p>
-                  <button className="bg-white text-purple-700 hover:bg-gray-100 font-bold py-3 px-6 rounded-lg transition duration-300">
-                    Apply Here
-                  </button>
-                </div>
-                <div className="md:w-1/2 flex justify-center">
-                  <img 
-                    src="https://via.placeholder.com/400x300" 
-                    alt="Trophy" 
-                    className="w-full max-w-md h-auto rounded-lg shadow-lg"
-                  />
-                </div>
-              </div>
-            </div>
+       <div className="relative bg-[#61126C] w-full h-96 flex flex-col items-center justify-center overflow-hidden rounded-xl">
+      {/* Background pattern - subtle overlay */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+      </div>
+      
+      {/* Left navigation button */}
+      <button className="absolute left-4 md:left-8 bg-[#8DC63E] bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#8DC63E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      
+      {/* Right navigation button */}
+      <button className="absolute right-4 md:right-8 bg-[#8DC63E] bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#8DC63E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+      
+      {/* Content */}
+      <div className="relative right-[350px]   ">
+        {/* Small repeated text */}
+        <div className="mb-4 overflow-hidden h-6">
+          <div className="animate-marquee whitespace-nowrap text-white text-opacity-70 text-lg">
+            Lorem Ipsum is simply mply • 
           </div>
+        </div>
+        
+        {/* Main title */}
+        <h1 className="text-4xl md:text-5xl font-semibold text-white mb-4 tracking-wide">
+          Apply Your Award
+        </h1>
+
+        <p className="text-white text-opacity-70 text-sm mb-4">Lorem Ipsum is simply </p>
+        
+        {/* Apply button */}
+        <button className="bg-white text-[#8DC63E] hover:bg-gray-100 font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 shadow-lg">
+          Apply Here
+        </button>
+      </div>
+      
+      {/* Decorative elements */}
+      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black to-transparent opacity-10"></div>
+    </div>
+
+
+
+
         </div>
 
         <div className="text-center">
