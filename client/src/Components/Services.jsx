@@ -15,7 +15,7 @@ const Services = () => {
   // Dummy training data (25 items → 5 pages)
  const trainingData = Array.from({ length: 25 }, (_, i) => ({
   id: i + 1,
-  title: "Machine Repairing",
+  title: "Micro Service in CIDA",
   description:
     "Ut enim ad minim veniam, quis nostr exercitation ullamco laboris nisi ut aliquip ex commodo.",
   image: images[i % images.length], // cycle through images
@@ -75,6 +75,11 @@ const Services = () => {
         {/* ===== Tab Content ===== */}
         {activeTab === "training" && (
           <>
+          <div className="text-center p-5">
+            <p className="text-[#8DC63E]  font-medium ">Explore Your Services</p>
+            <p className="text-3xl text-[#818285] font-medium pb-2">What we do <span className="text-[#8DC63E]" >for you</span></p>
+            <p className="text-[#818285]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+          </div>
             {/* ==== Filter Section ==== */}
             <div className="flex flex-wrap gap-3 my-4">
               {[1, 2, 3].map((i) => (
@@ -94,9 +99,9 @@ const Services = () => {
                 <input
                   type="text"
                   placeholder="Search your things"
-                  className="w-full bg-gray-200 text-gray-700 py-2 px-4 pr-10 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full bg-gray-200 text-gray-700 py-2 px-4 pr-10 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
-                <button className="absolute right-0 top-0 h-full bg-[#8DC63E] text-white px-4 rounded-r-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <button className="absolute right-0 top-0 h-full bg-[#8DC63E] text-white px-4 rounded-full hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
                   🔍
                 </button>
               </div>
