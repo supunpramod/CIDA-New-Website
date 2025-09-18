@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import Home from './Components/Home page/Home';
 import Footer from './Components/Footer';
 import Support from './Components/Support.jsx';
+import Services from './Components/Services.jsx';
 
 
 // extra example pages
@@ -29,6 +30,8 @@ function App() {
           <Route path="/support" element={<Support />} />
           <Route path="/regularityinfo" element={<RegularityInfo />} />
           <Route path="/aboutus" element={<AboutUs />} />
+           <Route path="/services" element={< Services/>} />
+
           
         </Routes>
 
