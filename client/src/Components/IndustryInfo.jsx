@@ -109,7 +109,7 @@ const IndustryInfo = () => {
   key={index} 
   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 min-h-[400px] flex flex-col justify-between"
 >
-  <div className="p-2 flex-1 flex flex-col m-10">
+  <div className="p-2 flex-1 flex flex-col m-8">
     <div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">
         {module.title.split(' ').map((word, i) =>
@@ -123,9 +123,7 @@ const IndustryInfo = () => {
     <div className="mt-auto text-center">
       <button className="inline-flex items-center px-7 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-[#8DC63E] hover:bg-[#8DC63E] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
         See More
-        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
+        
       </button>
     </div>
   </div>

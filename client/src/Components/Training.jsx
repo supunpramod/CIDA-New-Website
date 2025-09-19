@@ -4,6 +4,8 @@ import react from "react";
 import { Link } from "react-router-dom";
 import Bannercover from "../assets/Bannercover.png";
 import Research1 from "../assets/research3.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown,faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const images = [Research1, Research1, Research1];
 
@@ -73,34 +75,39 @@ const TrainingandCertification = () => {
         </div>
 
         {/* ===== Tab Content ===== */}
-        {activeTab === "training" && (
-          <>
-            {/* ==== Filter Section ==== */}
-            <div className="flex flex-wrap gap-3 my-4">
-              {[1, 2, 3].map((i) => (
-                <div className="relative" key={i}>
-                  <select className="appearance-none bg-[#D9D9D9] text-[#9F9F9F] py-2 px-4 pr-8 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500">
-                    <option>Select Here Filter</option>
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    ▼
+                {activeTab === "training" && (
+                  <>
+                  <div className="text-center p-5">
+                    <p className="text-[#8DC63E]  font-medium ">Explore Your Services</p>
+                    <p className="text-3xl text-[#818285] font-medium pb-2">What we do <span className="text-[#8DC63E]" >for you</span></p>
+                    <p className="text-[#818285]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
                   </div>
-                </div>
-              ))}
-              <div className="relative flex-grow">
-                <input
-                  type="text"
-                  placeholder="Search your things"
-                  className="w-full bg-gray-200 text-gray-700 py-2 px-4 pr-10 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                />
-                <button className="absolute right-0 top-0 h-full bg-[#8DC63E] text-white px-4 rounded-r-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
-                  🔍
-                </button>
-              </div>
-            </div>
+                    {/* ==== Filter Section ==== */}
+                    <div className="flex flex-wrap gap-3 my-4">
+                      {[1, 2, 3].map((i) => (
+                        <div className="relative" key={i}>
+                          <select className="appearance-none bg-[#D9D9D9] text-[#9F9F9F] py-2 px-6 pr-8 rounded-full focus:outline-none focus:ring-2 focus:ring-[#8DC63E]">
+                            <option>Select Here Filter</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                          </select>
+                          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[#818285]">
+                            <FontAwesomeIcon icon={faChevronDown} />
+                          </div>
+                        </div>
+                      ))}
+                      <div className="relative flex-grow">
+                        <input
+                          type="text"
+                          placeholder="Search your things"
+                          className="w-full bg-gray-200 text-gray-700 py-2 px-4 pr-10 rounded-full focus:outline-none focus:ring-2 focus:ring-[#8DC63E]"
+                        />
+                        <button className="absolute right-0 top-0 h-full bg-[#8DC63E] text-white px-4 rounded-full hover:bg-[#8DC63E] focus:outline-none focus:ring-2 focus:ring-green-500">
+                          <FontAwesomeIcon icon={faMagnifyingGlass} />
+                        </button>
+                      </div>
+                    </div>
 
             {/* ==== Courses Grid ==== */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
