@@ -53,7 +53,7 @@ const TrainingandCertification = () => {
 
 
       {/* ===== Main Content ===== */}
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="w-full mx-auto px-4 py-8 md:px-16">
         {/* ===== Tabs ===== */}
         <div className="flex border-b border-[#8DC63E] mb-4">
           {[

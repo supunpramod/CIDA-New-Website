@@ -98,7 +98,7 @@ const RegularityInfo = () => {
 
 
 
-      <div className="container mx-auto  py-16 max-w-6xl ">
+      <div className="w-full mx-auto  py-16  md:px-16 ">
         {sections.map((section, index) => (
           <div
             key={index}

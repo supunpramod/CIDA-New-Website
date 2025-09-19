@@ -45,9 +45,9 @@ const IndustryInfo = () => {
       
 
       {/* FAQ Section */}
-      <section className="w-full  pt-36 ">
+      <section className="w-full  pt-36  ">
         
-        <div className="relative w-full h-[300px] ">
+        <div className="relative w-full h-[300px]  ">
         {/* Background Image */}
         <img
           src={Bannercover1}
@@ -90,10 +90,10 @@ const IndustryInfo = () => {
 
 
       
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gray-100 py-12   ">
+      <div className="w-full md:px-16">
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 md:px-16">
           <p className="text-[#8DC63E] text-large">Explore our Info</p>  
           <h1 className="text-4xl font-bold text-[#818285] sm:text-5xl md:text-4xl">
             Get CID info<span className="text-[#8DC63E]"> Document</span>
@@ -103,7 +103,7 @@ const IndustryInfo = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 ">
           {modules.map((module, index) => (
             <div 
   key={index} 

@@ -96,7 +96,7 @@ const Support = () => {
 
 
 
-        <div className="container mx-auto px-4 md:px-16">
+        <div className="w-full mx-auto px-4  md:px-16">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-[#818285] mb-2 mt-10">
               <span className="text-[#8DC63E] ">Explore FAQs</span>
@@ -145,7 +145,7 @@ const Support = () => {
 
       {/* Contact Section */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row gap-8 md:px-16">
+        <div className="w-full mx-auto px-4 flex flex-col md:flex-row gap-8 md:px-16">
           <div className="md:w-1/2">
             <div className="mb-6">
               <h2 className="text-xl font-bold text-gray-700 mb-2">
