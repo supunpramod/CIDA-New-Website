@@ -8,12 +8,13 @@ import Support from './Components/Support.jsx';
 import Services from './Components/Services.jsx';
 
 
-// extra example pages
+
 
 import Researchpage from './Components/Researchpage';
 import TrainingandCertification from './Components/Training.jsx';
 import RegularityInfo from './Components/RegularityInfo.jsx';
 import  AboutUs from './Components/AboutUs.jsx';
+import IndustryInfo from './Components/IndustryInfo.jsx';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/regularityinfo" element={<RegularityInfo />} />
           <Route path="/aboutus" element={<AboutUs />} />
            <Route path="/services" element={< Services/>} />
+           <Route path="/industryinfo" element={< IndustryInfo/>} />
 
           
         </Routes>
